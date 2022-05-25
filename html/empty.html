@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empty 예제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input').click(function(){
+                // 영역비우기 = empty(); 하위 자식들의 내용이 사라짐
+                // 레이어 삭제 - remove(); 자신의 선택을 포함한 모든 태그 사라짐
+
+                // $('#showhide').html(''); 방법1
+                // $('#showhide').empty(); 방법2 <<< 더 나은 방법
+
+                $('#showhide').remove('');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="비우기버튼">
+    <div id="showhide">
+        showhide 내용
+        showhide 내용
+        showhide 내용
+        showhide 내용
+    </div>
+</body>
+</html>

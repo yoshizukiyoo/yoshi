@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empty 예제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.btn').click(function(){
+                var index = $('.btn').index(this); // .index(this) 지정하면 선택한 this 지정한 값을 출력할수있음 숫자 0 ,1 ,2 순서대로 표현됨
+                // console.log(index);
+                $('.layer').hide();
+                $('.layer').eq(index).show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" class="btn" value="버튼1">
+    <input type="button" class="btn" value="버튼2">
+    <input type="button" class="btn" value="버튼3">
+
+    <div class="layer" style="display: none;">
+        레이어1
+        레이어1
+        레이어1
+    </div>
+    <div class="layer" style="display: none;">
+        레이어2
+        레이어2
+        레이어2
+    </div>
+    <div class="layer" style="display: none;">
+        레이어3
+        레이어3
+        레이어3
+    </div>
+</body>
+</html>
