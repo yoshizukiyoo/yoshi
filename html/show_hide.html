@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show , hide 예제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#showbutton').click(function(){
+                //display:block;
+                // $('#showhide').show();
+                // $('#showhide').fadeIn();
+                 $('#showhide').slideDown();
+            });
+            $('#hidebutton').click(function(){
+                //display:none;
+                // $('#showhide').hide();
+                // $('#showhide').fadeOut();
+                $('#showhide').slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="show" id="showbutton">
+    <input type="button" value="hide" id="hidebutton">
+    <div id="showhide" style="display: none;">
+        showhide 내용
+        showhide 내용
+        showhide 내용
+        showhide 내용
+    </div>
+</body>
+</html>
