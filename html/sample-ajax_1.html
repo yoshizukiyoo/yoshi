@@ -6,19 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>내용정리</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://malsup.github.io/jquery.form.js"></script>
+
     <script>
         $(document).ready(function(){
-            $.ajax({
-                url: '', // 파일위치 주소
-                type: '', // ex) GET , POST 받을 타입
-                dataType: '', // ex) html , json 등등
-                success: function(test) { // 변수 i 지정후 i를 중간에 넣고싶을때 [i] 로 넣고 문구중간에 넣고싶을땐 변수 양끝에 +변수+ 하면된다 ,, 문장은 "내용정리"
-                    
-                $.each(변수,function(index,data){
-                    
+
+            $('formbutton').click(function(){
+                $('form').ajaxForm({ // ajaxForm 변수명은 jquery 플러그인에서 제공해주는 내용이다
+                    beforeSubmit : function(){
+                        // validation 체크
+                        return false;
+                    },
+                    success : function(){
+                        alert('파일 업로드 성공')
+                    }
+                })
+                $.ajax({
+                    url: '', // 파일위치 주소
+                    type: '', // ex) GET , POST 받을 타입
+                    dataType: '', // ex) html , json 등등
+                    success: function(test) { // 변수 i 지정후 i를 중간에 넣고싶을때 [i] 로 넣고 문구중간에 넣고싶을땐 변수 양끝에 +변수+ 하면된다 ,, 문장은 "내용정리"
+                        
+                    $.each(변수,function(index,data){
+                        
+                    });
+                    }
                 });
-                }
+
+                $('button').submit(); // 파일전송 버튼 확인시 전송보내는 내용!
             });
+            // 1. 파일업로드 > default form submit 이 있다
+            // 페이지 전환이 되면서 다시 글쓰기 폼이나 목록폼으로 이동이 됩니다.
+            // 2. 간혹가다 ajax로 파일업로드 기능을 넣어어주세요 - 요구사항이 존재함
+            // 이럴때는, 예를들어서 , IE 6,7,8,9를 베제하겠다 라고 가정할경우,
+            // New Formdata() 객체를 사용하시면 됩니다.
+            // 3. IE 6,7,8,9도 지원을 해야한다 라고 가정할경우,
+            // jquery.form 플러그인을 이용해서 ajax 파일업로드 기능을 구현할수 있다.
+            // 그중 , 선택하는 결정은 여러분들의 몫입니다.
         });
     </script>
 </head>
