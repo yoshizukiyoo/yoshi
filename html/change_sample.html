@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empty 예제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // change() 메소드는 해당하는 요소의 value에 변화가 생길 경우 이를 감지하여 등록된 callback함수를 동작시킵니다.
+            // 해당 코드는 input,textarea,select 태그에 동작합니다.
+            // value 에 변화가 생길시 이벤트 작동
+            $(function () {
+                var $inputEle = $("input");
+                $inputEle.change(function() {
+                    alert("파일 첨부가 완료되었습니다.");
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+    파일을 첨부해주세요!
+    <input type="file" value />
+</body>
+</html>
