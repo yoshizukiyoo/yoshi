@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trim 예제</title>
+    <head>
+        <script type="text/ecmascript" src="../resource/js/Guriddo_jqGrid_JS_demo/js/jquery.min.js"></script> 
+        <script type="text/ecmascript" src="../resource/js/Guriddo_jqGrid_JS_demo/js/trirand/i18n/grid.locale-en.js"></script>
+        <script type="text/ecmascript" src="../resource/js/Guriddo_jqGrid_JS_demo/js/trirand/jquery.jqGrid.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+        <link rel="stylesheet" type="text/css" media="screen" href="../resource/js/Guriddo_jqGrid_JS_demo/css/trirand/ui.jqgrid-bootstrap.css" />
+    
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <meta charset="utf-8" />
+        <title>jqGrid Loading Data - Million Rows from a REST service</title>
+    </head>
+    <script>
+        $(document).ready(function () {
+			// 테이블 코딩 ajax 테이블 데이터 코딩
+            $("#jqGrid").jqGrid({
+                url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+                mtype: "GET",
+				styleUI : 'Bootstrap',
+                datatype: "jsonp",
+                colModel: [
+                    //label: 컬럼명 
+                    { label: 'OrderID', name: 'OrderID', key: true, width: 75 },
+                    { label: 'Customer ID', name: 'CustomerID', width: 150 },
+                    { label: 'Order Date', name: 'OrderDate', width: 150 },
+                    { label: 'Freight', name: 'Freight', width: 150 },
+                    { label:'Ship Name', name: 'ShipName', width: 150 }
+                ],
+				viewrecords: true,
+                height: 250,
+				width : 780,
+                rowNum: 50,
+                pager: "#jqGridPager",
+                scroll: 1,
+            });
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div style="margin-left:20px">
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+</body>
+</html>
