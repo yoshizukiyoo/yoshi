@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empty 예제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../resource/js/vakata-jstree-7a03954/dist/jstree.min.js"></script>
+    <link rel="stylesheet" href="../resource/js/vakata-jstree-7a03954/dist/themes/default/style.min.css" />
+    <script>
+        $(document).ready(function(){
+    // 6 create an instance when the DOM is ready
+    $('#jstree').jstree();
+    // 7 bind to events triggered on the tree
+    // $('#jstree').on("changed.jstree", function (e, data) {
+    //   console.log(data.selected);
+    // });
+    // 8 interact with the tree - either way is OK
+    // $('button').on('click', function () {
+    //   $('#jstree').jstree(true).select_node('child_node_1');
+    //   $('#jstree').jstree('select_node', 'child_node_1');
+    //   $.jstree.reference('#jstree').select_node('child_node_1');
+    // });
+        });
+    </script>
+</head>
+<body>
+    <!-- 파일트리 라이브러리 및 플러그인 예제 -->
+  <!-- 3 setup a container element -->
+  <div id="jstree">
+    <!-- in this example the tree is populated from inline HTML -->
+    <ul>
+      <li class="jstree-open">Root node 1
+        <ul>
+          <li id="child_node_1">Child node 1</li>
+          <li>Child node 2</li>
+        </ul>
+      </li>
+      <li>Root node 2</li>
+    </ul>
+  </div>
+  <button>demo button</button>
+</body>
+</html>
