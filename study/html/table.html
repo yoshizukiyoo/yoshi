@@ -6,11 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trim 예제</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../resource/js/TableDnD-master/dist/jquery.tablednd.min.js"></script>
     <script>
         $(document).ready(function(){
+            // default 함수
+            // $('table').tableDnD();
 
+            // sortable UI 재정렬
+
+            // 옵션
+            $('table').tableDnD({
+                onDragClass : 'bluestyle', // 드래그 엑티브 시 클래스 요소
+                onDragStart : function(table,row){
+                    // console.log('드래그 시작');
+                    // console.log(table,row);
+                },
+                onDragStop : function(table,row){
+                    // console.log('드래그 중지');
+                    $('table').find('tr').each(function(index,data){
+                        // console.log(index,data);
+                        // 테이블 순서 1부터 재정렬 방법
+                        $(this).find('td').eq(0).html(index+1);
+                        console.log($(this).find('td').eq(0).html(index+1));
+                    })
+                }
+            });
         });
     </script>
+    <style>
+        .bluestyle {
+            background-color: blue;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <table border="1">
@@ -20,16 +48,19 @@
         </colgroup>
         <tbody>
             <tr>
+                <td>1</td>
                 <th>첫번째타이틀</th>
                 <td>내용1</td>
             </tr>
             <tr>
-                <th>첫번째타이틀</th>
-                <td>내용1</td>
+                <td>2</td>
+                <th>두번째타이틀</th>
+                <td>내용2</td>
             </tr>
             <tr>
-                <th>첫번째타이틀</th>
-                <td>내용1</td>
+                <td>3</td>
+                <th>세번째타이틀</th>
+                <td>내용3</td>
             </tr>
         </tbody>
     </table>
