@@ -91,8 +91,6 @@ a {
 	}
 }
 
-#scroll-section {}
-
 .desc-message {
 	width: 50%;
 	font-weight: bold;
@@ -141,6 +139,46 @@ footer {
 	justify-content: center;
 	height: 7rem;
 	background-color: darkorange;
+}
+
+.sticky-elem {
+	display: none;
+	position: fixed;
+	top: 0;
+	lefT: 0;
+	width: 100%;
+}
+
+#show-secen-1 {
+	#scroll-section-1 {
+		.sticky-elem {
+			display: block;
+		}
+	}
+}
+
+#show-secen-2 {
+	#scroll-section-2 {
+		.sticky-elem {
+			display: block;
+		}
+	}
+}
+
+#show-secen-3 {
+	#scroll-section-3 {
+		.sticky-elem {
+			display: block;
+		}
+	}
+}
+
+#show-secen-4 {
+	#scroll-section-4 {
+		.sticky-elem {
+			display: block;
+		}
+	}
 }
 
 @media screen and (min-widht: 1024px) {
