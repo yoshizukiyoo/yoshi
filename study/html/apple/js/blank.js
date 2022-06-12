@@ -1,6 +1,8 @@
 (() => {
 
 	let yOffset = 0; // windwo.pageYOffset 대신 쓸 변수
+	let prevScrollHeight = 0; // 현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 스크롤 높이값의 합
+	let currentScene = 0; // 현재 활성화된(눈 앞에 보고있는) 씬(scroll-section)
 
 	const sceneInfo = [{
 			// 0
@@ -49,8 +51,22 @@
 	}
 
 	function scrollLoop() {
+		prevScrollHeight = 0;
+		for (let i = 0; i < currentScene; i++) {
+			prevScrollHeight += sceneInfo[i].scrollHeight;
+		}
 
-		console.log(yOffset);
+		if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
+			currentScene++;
+		}
+
+		if (yOffset < prevScrollHeight) {
+			if (currentScene === 0) return; // 브라우저 IE나 사파리에서 당겨졌을때 마이너스값이 나올수있으므로 조건문을 추가하여 0일시에는 리턴으로 돌린다
+			currentScene--;
+		}
+
+		console.log(currentScene);
+
 	}
 
 	window.addEventListener('resize', setLayout)
