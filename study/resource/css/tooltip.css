@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+
+section {
+  width: 500px;
+  margin: 100px auto 0;
+}
+
+.ico {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.ico.ico-help {
+  background-image: url(../img/ico_help.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+
+.tooltip .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  background-color: transparent;
+}
