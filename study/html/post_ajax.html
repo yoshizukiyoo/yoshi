@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empty 예제</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $('input[name="sendbutton"]').click(function(){
+                // FormData(); -> ajax fileupload 가능 합니다.
+                // 대신, IE 6,7,8,9 버전은 지원안함 그외에는 전부 호횐가능함
+                // console.log('테스트');
+                // $('form').submit();
+                var frm = $('form')[0]; // 0 >> 첫번째 설정해줘야함
+                var formData = new FormData(frm);
+                $.ajax({
+                    url : '주소',
+                    type : 'post',
+                    processData: false,
+                    contentType: false,
+                    success : function(){
+                        alert('전송 성공');
+                    }
+                })
+                // ajax 는 화면전환이 안된다
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        action = url 주소 , method = 보내는방법or형식 , enctype 파일보내는형식에 꼭 필요한 내용
+    -->
+    <form action="/index.html" method="post" enctype="multipart/form-data">
+        <input type="text" name="textname">
+        <input type="file" name="filename">
+        <input type="button" name="sendbutton" value="전송">
+    </form>
+</body>
+</html>
