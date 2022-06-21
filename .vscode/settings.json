@@ -26,6 +26,6 @@
 	],
 
 	// "liveServer.settings.port": 3777,
-	"liveServer.settings.host": "192.168.19.1" // 집 IP
-	// "liveServer.settings.host": "192.168.0.168" // 회사 노트북 IP
+	// "liveServer.settings.host": "192.168.19.1" // 집 IP
+	"liveServer.settings.host": "192.168.0.168" // 회사 노트북 IP
 }
