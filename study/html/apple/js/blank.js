@@ -1,3 +1,7 @@
+// 아래의 의미는 같은 성질이다
+// (함수내용)(함수호출); == ( function(){} ) ();
+// (function(){}) (); , (() => {})(); 예시
+
 (() => {
 
 	let yOffset = 0; // windwo.pageYOffset 대신 쓸 변수
@@ -48,6 +52,16 @@
 			sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
 			sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`; // 템플릿문자 쓸때 '' (x) , ``(o) 참고
 		}
+
+		yOffset = window.pageYOffset;
+		let totalScrollHeight = 0; // 새로고침시 높이값계산하여 반복문 빠져나오기
+		for (let i = 0; i < sceneInfo.length; i++) {
+			totalScrollHeight += sceneInfo[i].scrollHeight;
+			if (totalScrollHeight >= yOffset) {
+				currentScene = i;
+				break;
+			}
+		}
 	}
 
 	function scrollLoop() {
@@ -58,18 +72,20 @@
 
 		if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
 			currentScene++;
+			document.body.setAttribute('id', `show-scene-${currentScene}`);
 		}
 
 		if (yOffset < prevScrollHeight) {
 			if (currentScene === 0) return; // 브라우저 IE나 사파리에서 당겨졌을때 마이너스값이 나올수있으므로 조건문을 추가하여 0일시에는 리턴으로 돌린다
 			currentScene--;
+			document.body.setAttribute('id', `show-scene-${currentScene}`);
 		}
 
-		console.log(currentScene);
+
 
 	}
 
-	window.addEventListener('resize', setLayout)
+
 	window.addEventListener('scroll', () => {
 		yOffset = window.pageYOffset;
 		scrollLoop();
@@ -78,6 +94,9 @@
 	// 사용자 이벤트마다 특정 코드를 실행하는 것이 가능하다.
 	// 이벤트 리스너를 이용할 경우 특정 스크롤 이벤트 발생 시 이벤트를 실행
 
-	setLayout();
+	// window.addEventListener('DOMContentLoaded', setLayout); // DOM 구조만 로드가되면 실행 예시) 이미지같은거 로드가안되더라도 실행함
+	window.addEventListener('load', setLayout);
+	window.addEventListener('resize', setLayout)
+
 
 })()
