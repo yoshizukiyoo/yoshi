@@ -24,7 +24,10 @@ section {
 .tooltip {
   display: none;
   position: absolute;
-  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 300px;
   margin: 0 auto;
   background-color: #ccc;
 }
