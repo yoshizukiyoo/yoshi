@@ -62,27 +62,27 @@
 				break;
 			}
 		}
+		document.body.setAttribute('id', `show-scene-${currentScene}`);
 	}
 
 	function scrollLoop() {
 		prevScrollHeight = 0;
 		for (let i = 0; i < currentScene; i++) {
-			prevScrollHeight += sceneInfo[i].scrollHeight;
+			const test = prevScrollHeight += sceneInfo[i].scrollHeight;
 		}
 
 		if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
 			currentScene++;
-			document.body.setAttribute('id', `show-scene-${currentScene}`);
+			// document.body.setAttribute('id', `show-scene-${currentScene}`);
 		}
 
 		if (yOffset < prevScrollHeight) {
 			if (currentScene === 0) return; // 브라우저 IE나 사파리에서 당겨졌을때 마이너스값이 나올수있으므로 조건문을 추가하여 0일시에는 리턴으로 돌린다
+			console.log(prevScrollHeight);
 			currentScene--;
-			document.body.setAttribute('id', `show-scene-${currentScene}`);
+			// document.body.setAttribute('id', `show-scene-${currentScene}`);
 		}
-
-
-
+		// document.body.setAttribute('id', `show-scene-${currentScene}`);
 	}
 
 
@@ -97,6 +97,5 @@
 	// window.addEventListener('DOMContentLoaded', setLayout); // DOM 구조만 로드가되면 실행 예시) 이미지같은거 로드가안되더라도 실행함
 	window.addEventListener('load', setLayout);
 	window.addEventListener('resize', setLayout)
-
 
 })()
