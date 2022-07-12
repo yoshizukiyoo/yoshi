@@ -1,0 +1,174 @@
+// 삼성 페이지 작업
+*,
+ul,
+li {
+	list-style: none;
+	text-decoration: none;
+	color: currentColor;
+}
+
+.container {
+	padding: 20px;
+	letter-spacing: -0.04rem;
+
+	section {
+		width: 800px;
+		margin: 50px auto 0;
+	}
+
+	h2.title {
+		text-align: center;
+		font-size: 28px;
+
+		span {
+			font-size: 10px;
+			color: blue;
+			margin-top: 10px;
+		}
+
+		.d-b {
+			display: block;
+		}
+	}
+
+	.sec-1 {
+		h3.title {}
+
+		.tab-list {
+			margin: 30px 0;
+
+			>ul {
+				padding-left: 0;
+				display: flex;
+
+				li {
+					flex: 0 1 auto;
+					margin: 0 10px;
+
+					&:first-child {
+						margin: 0 10px 0 0;
+					}
+
+					a {
+						display: block;
+						font-weight: bold;
+						font-size: 16px;
+						padding: 0 10px;
+						line-height: 30px;
+
+						&.on {
+							border: 1px solid #000;
+							border-radius: 25px;
+						}
+					}
+				}
+			}
+		}
+
+		.tab-area {
+			.tab-content {
+				margin: 10px auto;
+
+				.content-area {
+					display: flex;
+
+					.content-left,
+					.content-right {
+						flex: 1 1 50%;
+						width: 50%;
+					}
+
+					.content-left {
+						h4.title {
+							font-size: 28px;
+							width: calc(100% - 80px);
+						}
+
+						p {
+							font-size: 16px;
+							color: #ccc;
+
+							span {
+								display: block;
+							}
+						}
+
+						>a {
+							font-size: 18px;
+							font-weight: bold;
+							position: relative;
+
+							&:after {
+								content: '>';
+								position: absolute;
+								right: -20px;
+								top: calc(50% - 1px);
+								transform: translateY(-50%);
+							}
+						}
+					}
+
+					.content-right {
+						.bar-wrap {
+							display: flex;
+							height: 100%;
+							align-items: flex-end;
+
+							.bar {
+								flex: 1 1 33.333%;
+								margin: 0 10px;
+								text-align: center;
+								display: flex;
+								flex-wrap: wrap;
+								justify-content: center;
+								height: 100%;
+								flex-direction: column;
+
+								&:first-child {
+									margin: 0 10px 0 0;
+								}
+
+								&:last-child {
+									margin: 0 0 0 10px;
+								}
+
+								&.bar-1 {
+									height: calc(100% - 100px);
+								}
+
+								&.bar-2 {
+									height: calc(100% - 75px);
+								}
+
+								&.bar-3 {
+									height: calc(100% - 50px);
+								}
+
+								.bar-area {
+									background-color: blue;
+									color: white;
+									font-weight: bold;
+									border-radius: 10px;
+									padding: 10px;
+									display: flex;
+									align-items: flex-end;
+									justify-content: center;
+									flex: 1 1 auto;
+								}
+
+								span {
+									flex: 0 0 auto;
+									display: block;
+									margin-top: 10px;
+									color: #000;
+									font-weight: bold;
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+}

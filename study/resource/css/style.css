@@ -48,3 +48,199 @@ button {
   border: 0;
   background-color: transparent;
 }
+
+*,
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.container {
+  padding: 20px;
+  letter-spacing: -0.04rem;
+}
+
+.container section {
+  width: 800px;
+  margin: 50px auto 0;
+}
+
+.container h2.title {
+  text-align: center;
+  font-size: 28px;
+}
+
+.container h2.title span {
+  font-size: 10px;
+  color: blue;
+  margin-top: 10px;
+}
+
+.container h2.title .d-b {
+  display: block;
+}
+
+.container .sec-1 .tab-list {
+  margin: 30px 0;
+}
+
+.container .sec-1 .tab-list > ul {
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .sec-1 .tab-list > ul li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin: 0 10px;
+}
+
+.container .sec-1 .tab-list > ul li:first-child {
+  margin: 0 10px 0 0;
+}
+
+.container .sec-1 .tab-list > ul li a {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.container .sec-1 .tab-list > ul li a.on {
+  border: 1px solid #000;
+  border-radius: 25px;
+}
+
+.container .sec-1 .tab-area .tab-content {
+  margin: 10px auto;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-left,
+.container .sec-1 .tab-area .tab-content .content-area .content-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  width: 50%;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-left h4.title {
+  font-size: 28px;
+  width: calc(100% - 80px);
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-left p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-left p span {
+  display: block;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-left > a {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-left > a:after {
+  content: '>';
+  position: absolute;
+  right: -20px;
+  top: calc(50% - 1px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+  margin: 0 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar:first-child {
+  margin: 0 10px 0 0;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar:last-child {
+  margin: 0 0 0 10px;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar.bar-1 {
+  height: calc(100% - 100px);
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar.bar-2 {
+  height: calc(100% - 75px);
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar.bar-3 {
+  height: calc(100% - 50px);
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar .bar-area {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.container .sec-1 .tab-area .tab-content .content-area .content-right .bar-wrap .bar span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: block;
+  margin-top: 10px;
+  color: #000;
+  font-weight: bold;
+}
