@@ -14,9 +14,18 @@ body {
 
 .global-nav {
 	height: 44px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 1rem;
 }
 
 .local-nav {
+	position: absolute;
+	top: 45px;
+	width: 100%;
+	padding: 0 1rem;
 	height: 52px;
 	border-bottom: 1px solid #ddd;
 }
@@ -61,6 +70,7 @@ a {
 }
 
 .scroll-section {
+	border: 3px solid red;
 	padding-top: 50vh;
 }
 
@@ -145,11 +155,11 @@ footer {
 	display: none;
 	position: fixed;
 	top: 0;
-	lefT: 0;
+	left: 0;
 	width: 100%;
 }
 
-#show-secen-1 {
+#show-scene-0 {
 	#scroll-section-1 {
 		.sticky-elem {
 			display: block;
@@ -157,7 +167,7 @@ footer {
 	}
 }
 
-#show-secen-2 {
+#show-scene-1 {
 	#scroll-section-2 {
 		.sticky-elem {
 			display: block;
@@ -165,7 +175,7 @@ footer {
 	}
 }
 
-#show-secen-3 {
+#show-scene-2 {
 	#scroll-section-3 {
 		.sticky-elem {
 			display: block;
@@ -173,7 +183,7 @@ footer {
 	}
 }
 
-#show-secen-4 {
+#show-scene-3 {
 	#scroll-section-4 {
 		.sticky-elem {
 			display: block;

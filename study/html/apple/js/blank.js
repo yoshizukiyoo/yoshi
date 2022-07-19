@@ -14,8 +14,15 @@
 			heightNum: 5, // 브라우저 높이의 5배로 scrollHeight 세팅
 			scrollHeight: 0,
 			objs: {
-				container: document.querySelector('#scroll-section-1')
-			}
+				container: document.querySelector('#scroll-section-1'),
+				messageA: document.querySelector('#scroll-section-1 .main-message.a'),
+				messageB: document.querySelector('#scroll-section-1 .main-message.b'),
+				messageC: document.querySelector('#scroll-section-1 .main-message.c'),
+				messageD: document.querySelector('#scroll-section-1 .main-message.d'),
+			},
+			values: {
+				messageA_opacity: [0, 1]
+			},
 		},
 		{
 			// 1
@@ -62,12 +69,30 @@
 				break;
 			}
 		}
+		document.body.setAttribute('id', `show-scene-${currentScene}`);
+	}
+
+	function palyanimation() {
+		switch (currentScene) {
+			case 0:
+				console.log('0 play');
+				break;
+			case 1:
+				console.log('1 play');
+				break;
+			case 2:
+				console.log('2 play');
+				break;
+			case 3:
+				console.log('3 play');
+				break;
+		}
 	}
 
 	function scrollLoop() {
 		prevScrollHeight = 0;
 		for (let i = 0; i < currentScene; i++) {
-			prevScrollHeight += sceneInfo[i].scrollHeight;
+			const test = prevScrollHeight += sceneInfo[i].scrollHeight;
 		}
 
 		if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
@@ -77,12 +102,12 @@
 
 		if (yOffset < prevScrollHeight) {
 			if (currentScene === 0) return; // 브라우저 IE나 사파리에서 당겨졌을때 마이너스값이 나올수있으므로 조건문을 추가하여 0일시에는 리턴으로 돌린다
+			console.log(prevScrollHeight);
 			currentScene--;
 			document.body.setAttribute('id', `show-scene-${currentScene}`);
 		}
 
-
-
+		palyanimation();
 	}
 
 
@@ -97,6 +122,5 @@
 	// window.addEventListener('DOMContentLoaded', setLayout); // DOM 구조만 로드가되면 실행 예시) 이미지같은거 로드가안되더라도 실행함
 	window.addEventListener('load', setLayout);
 	window.addEventListener('resize', setLayout)
-
 
 })()
