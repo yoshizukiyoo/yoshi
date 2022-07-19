@@ -406,3 +406,59 @@ li {
 		}
 	}
 }
+
+.container-2 {
+	width: 90%;
+	margin: 0 auto;
+
+	h2.title {
+		text-align: center;
+	}
+
+	nav {
+		ul {
+			display: flex;
+			padding-left: 0;
+
+			li {
+				a {
+					font-size: 20px;
+					line-height: 1.6em;
+					padding: 0 15px;
+					border: 2px solid #000;
+					display: block;
+					border-radius: 20px;
+					background-color: #ccc;
+
+					&.on {
+						background-color: #000;
+						color: white;
+					}
+				}
+
+				&+li {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+		margin-top: 50px;
+		border-top: 2px solid #000;
+
+		caption {
+			text-align: left;
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		th,
+		td {
+			padding: 20px;
+			text-align: center;
+			border-bottom: 1px solid #ebebeb;
+		}
+	}
+}

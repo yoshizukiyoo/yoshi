@@ -477,3 +477,57 @@ li {
   left: -10px;
   background-color: transparent;
 }
+
+.container-2 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-2 h2.title {
+  text-align: center;
+}
+
+.container-2 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+}
+
+.container-2 nav ul li a {
+  font-size: 20px;
+  line-height: 1.6em;
+  padding: 0 15px;
+  border: 2px solid #000;
+  display: block;
+  border-radius: 20px;
+  background-color: #ccc;
+}
+
+.container-2 nav ul li a.on {
+  background-color: #000;
+  color: white;
+}
+
+.container-2 nav ul li + li {
+  margin-left: 10px;
+}
+
+.container-2 table {
+  width: 100%;
+  margin-top: 50px;
+  border-top: 2px solid #000;
+}
+
+.container-2 table caption {
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container-2 table th,
+.container-2 table td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+}

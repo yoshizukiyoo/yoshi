@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>trim 예제</title>
+	<link rel="stylesheet" href="../resource/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// 해당 페이지 스크립트 구현
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container-2">
+		<h2 class="title">민원건수 공시/실태평가 결과</h2>
+		<nav>
+			<ul>
+				<li><a href="#" class="on" data-btn="cont1">실태평가 결과</a></li>
+				<li><a href="#" data-btn="cont2">민원건수 공시</a></li>
+			</ul>
+		</nav>
+
+		<div class="content" data-tab="cont1">
+			<table>
+				<caption>최근 3년간 소비자보호 실태평가* 결과</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th rowspan="2" scope="col">구분</th>
+						<th rowspan="2" scope="col">평가 항목</th>
+						<th colspan="2" scope="colgroup">평가 결과</th>
+						<th rowspan="2" scope="col">평가 항목</th>
+						<th scope="row">평가 결과</th>
+					</tr>
+					<tr>
+						<th scope="col">2018년</th>
+						<th scope="col">2019년</th>
+						<th scope="col">2020년</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="2">종합등급</td>
+						<td>우수</td>
+						<td>우수</td>
+						<td>종합등급</td>
+						<td>양호</td>
+					</tr>
+					<tr>
+						<th rowspan="5" scope="row">계량항목</th>
+						<th scope="row">1. 민원 건수</th>
+						<td>양호</td>
+						<td>양호</td>
+						<th rowspan="2" scope="row">1. 민원 사전 예방 관련 사항</th>
+						<td rowspan="2">양호</td>
+					</tr>
+					<tr>
+						<th scope="row">2. 민원 처리 노력</th>
+						<td>우수</td>
+						<td>우수</td>
+					</tr>
+					<tr>
+						<th scope="row">3. 소송 건수</th>
+						<td>우수</td>
+						<td>우수</td>
+						<th rowspan="3" scope="row">2. 민원 처리 노력 및 금융소비자 대상 소송 관련 사항</th>
+						<td rowspan="3">우수</td>
+					</tr>
+					<tr>
+						<th scope="row">4. 영업 지속 가능성</th>
+						<td>양호</td>
+						<td>양호</td>
+					</tr>
+					<tr>
+						<th scope="row">5. 금융사고</th>
+						<td>우수</td>
+						<td>우수</td>
+					</tr>
+
+					<tr>
+						<th rowspan="5" scope="row">비계량항목</th>
+						<th scope="row">6. 소비자보호 지배구조</th>
+						<td>양호</td>
+						<td>우수</td>
+						<th scope="row">3. 금융소비자보호 전담 조직 관련 사항</th>
+						<td>양호</td>
+					</tr>
+					<tr>
+						<th scope="row">7. 상품 개발 과정의 소비자보호 체계</th>
+						<td>양호</td>
+						<td>양호</td>
+						<th scope="row">4. 금융상품 개발 과정의 소비자보호 체계 구축 및 운영</th>
+						<td>양호</td>
+					</tr>
+					<tr>
+						<th scope="row">8. 상품 판매 과정의 소비자보호 체계</th>
+						<td>양호</td>
+						<td>양호</td>
+						<th scope="row">5. 금융상품 판매 과정의 소비자보호 체계 구축 및 운영</th>
+						<td>양호</td>
+					</tr>
+					<tr>
+						<th scope="row">9. 소비자보호 정책 참여 및 민원 시스템 운영</th>
+						<td>양호</td>
+						<td>양호</td>
+						<th scope="row">6. 민원 관리 시스템 및 소비자정보 공시 관련 사항</th>
+						<td>보통</td>
+					</tr>
+					<tr>
+						<th scope="row">10. 소비자정보 공시</th>
+						<td>양호</td>
+						<td>우수</td>
+						<th scope="row">7. 기타 소비자보호 관련 사항</th>
+						<td>양호</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>* 매년 금융감독원이 금융소비자에게 직접적인 영향을 미치는 민원 및 소송건수 등의 계량항목과 금융소비자보호 조직·제도 및 금융상품 기획·개발 과정, 금융상품 판매 과정 등의 비계량항목을 종합적으로
+				고려하여 평가
+				→ 2018년 평가부터 항목별 5단계(우수, 양호, 보통, 미흡, 취약) 평가 및 금융사별 종합 등급 평가 추가</p>
+
+			<table>
+				<caption>금융소비자보호 실태평가 평가 항목</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">평가 부문</th>
+						<th scope="col">세부 평가 기준</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th rowspan="2" scope="row">계량항목</th>
+						<th scope="row">1. 민원 사전 예방 관련 사항</th>
+						<td>
+							<ul>
+								<li>금융감독원에 접수된 민원 건수 및 증감률(중·반복 및 악성 민원 등은 제외)</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">2. 민원 처리 노력 및 금융소비자 대상 소송 관련 사항</th>
+						<td>
+							<ul>
+								<li>금융회사에 자율 조정 처리 의뢰된 민원 건 중 조정 성립된 민원 건수 비율</li>
+								<li>금융감독원에 접수된 민원 평균 처리 기간</li>
+								<li>소송 건수와 분쟁 조정 중 금융회사의 소송 제기 건수</li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<th rowspan="5" scope="row">비계량항목</th>
+						<th scope="row">3. 금융소비자보호 전담 조직 관련 사항</th>
+						<td>
+							<ul>
+								<li>금융소비자보호 내부통제위원회, 금융소비자보호 총괄기관 설치 및 운영 현황</li>
+								<li>금융소비자보호 총괄기관의 임직원 직무 현황 및 성과보상 체계 운영 현황</li>
+								<li>금융소비자보호 업무 계획 수립 및 유관 부서의 소비자보호 노력에 대한 평가 체계 운영 현황</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">4. 금융상품 개발 과정의 소비자보호 체계 구축 및 운영</th>
+						<td>
+							<ul>
+								<li>금융상품 개발 관련 내부 준칙 및 사전 협의 프로세스 운영의 적정성</li>
+								<li>금융상품 개발 시 금융소비자, 외부 전문가 등 대내외 의견 반영 프로세스 운영의 적정성</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">5. 금융상품 판매 과정의 소비자보호 체계 구축 및 운영</th>
+						<td>
+							<ul>
+								<li>금융상품 판매 관련 내부 기준 마련 및 프로세스 운영의 적정성</li>
+								<li>영업 담당 임직원 직무 현황 및 소비자보호 관련 성과보상 체계 운영의 적정성</li>
+								<li>금융상품 판매 후 프로세스 운영의 적정성</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">6. 민원 관리 시스템 및 소비자정보 공시 관련 사항</th>
+						<td>
+							<ul>
+								<li>민원 관리 절차 및 시스템 구축, 운영 현황</li>
+								<li>민원 모니터링, 사전 예방 프로그램 및 인력 운영 현황</li>
+								<li>홈페이지, ARS 등을 통한 소비자정보 접근성</li>
+								<li>금융상품 설명 등 관련 공시 및 안내의 적정성</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">7. 기타 소비자보호 관련 사항</th>
+						<td>
+							<ul>
+								<li>고령자, 장애인의 편의성 제고 및 소비자 피해 예방 노력</li>
+								<li>임직원 및 금융소비자 대상 교육 프로그램 운영 현황</li>
+								<li>금융당국의 소비자보호 정책 참여 및 이행 노력</li>
+								<li>고객정보 보호를 위한 제도 및 시스템의 적정성</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="content" data-tab="cont2"></div>
+	</div>
+</body>
+
+</html>
