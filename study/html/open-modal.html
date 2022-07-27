@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>오픈모달</title>
+	<link rel="stylesheet" href="../resource/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// 해당 페이지 스크립트 구현
+		});
+
+		function openmodal() {
+			const width = 600; // 팝업크기
+			const height = 600; // 팝업높이
+
+			let left = (document.body.offsetWidth / 2) - (width / 2); // 브라우저 크기값 /2 - 팝업크기 /2
+			let tops = document.body.offsetHeight // 브라우저 높이값
+			window.open('/', 'popup', `width=${width}, height=${height}, left=${left}, top=${tops}, popup=yes`);
+		}
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<button type="button" onclick="openmodal()">테스트</button>
+	</div>
+</body>
+
+</html>
