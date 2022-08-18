@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lottie</title>
+	<link rel="stylesheet" href="../resource/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			// 해당 페이지 스크립트 구현
+		});
+
+		document.addEventListener('DOMContentLoaded', function () {
+			// 해당 페이지 스크립트 구현
+			console.log('들어옴');
+			const animation = lottie.loadAnimation({
+				container: document.querySelector('#lottie'), // Required
+				path: '../resource/js/ico-check.json', // Required
+				renderer: 'svg', // Required
+				loop: true, // Optional
+				autoplay: true, // Optional
+			})
+			animation.play()
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div id="lottie"></div>
+	</div>
+</body>
+
+</html>
