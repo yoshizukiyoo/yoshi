@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>하나투어 - 작업 페이지</title>
+	<link rel="stylesheet" href="../resources/css/hanatours.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+		});
+
+		history.scrollRestoration = "manual"
+
+		document.addEventListener('DOMContentLoaded', function () {
+			// aisde nav 메뉴별
+			const content_start = document.querySelector('.js_tabs').getBoundingClientRect().top
+
+			// 스탭별 위치 이벤트
+			const step1 = document.querySelector('.safetyjoy')
+			const step2 = document.querySelector('.tour')
+			const step3 = document.querySelector('.hotel')
+			const step4 = document.querySelector('.meal')
+			const step5 = document.querySelector('.insurance')
+			const step6 = document.querySelector('.bene')
+
+			const cont1 = document.querySelector('#point01').getBoundingClientRect().top
+			const cont2 = document.querySelector('#point02').getBoundingClientRect().top
+			const cont3 = document.querySelector('#point03').getBoundingClientRect().top
+			const cont4 = document.querySelector('#point04').getBoundingClientRect().top
+			const cont5 = document.querySelector('#point05').getBoundingClientRect().top
+			const cont6 = document.querySelector('#point06').getBoundingClientRect().top
+
+			window.addEventListener('scroll', function () {
+				var content_this = this.scrollY
+
+				if (content_this >= cont1) {
+					document.querySelectorAll('.tabs > li').forEach(function (target) {
+						target.classList.remove('selected')
+						step1.classList.add('selected')
+					})
+				}
+
+				if (content_this >= cont2) {
+					document.querySelectorAll('.tabs > li').forEach(function (target) {
+						target.classList.remove('selected')
+						step2.classList.add('selected')
+					})
+				}
+
+				if (content_this >= cont3) {
+					document.querySelectorAll('.tabs > li').forEach(function (target) {
+						target.classList.remove('selected')
+						step3.classList.add('selected')
+					})
+				}
+
+				if (content_this >= cont4) {
+					document.querySelectorAll('.tabs > li').forEach(function (target) {
+						target.classList.remove('selected')
+						step4.classList.add('selected')
+					})
+				}
+
+				if (content_this >= cont5) {
+					document.querySelectorAll('.tabs > li').forEach(function (target) {
+						target.classList.remove('selected')
+						step5.classList.add('selected')
+					})
+				}
+
+				if (content_this >= cont6) {
+					document.querySelectorAll('.tabs > li').forEach(function (target) {
+						target.classList.remove('selected')
+						step6.classList.add('selected')
+					})
+				}
+
+
+				// 스크롤 sticky 이벤트
+				if (content_this >= content_start) {
+					document.querySelector('.tabs').style.cssText =
+						'position: fixed; z-index: 9999; margin-top:-32px;'
+					document.querySelector('.panels').style.paddingLeft = "142px";
+				} else if (content_start >= content_this) {
+					document.querySelector('.tabs').style.cssText =
+						'position: static; z-index: 9999; margin-top:0;'
+					document.querySelector('.panels').style.padding = "0 0 0 30px";
+				}
+				// else if () {
+
+				// }
+
+			})
+		})
+	</script>
+
+	<style>
+		.js_tabs {
+			padding-bottom: 1000px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="js_tabs type3 keypoints link no_division">
+		<ul class="tabs">
+			<li class="safetyjoy selected"><a href="#point01">핵심<br>포인트</a></li>
+			<li class="tour"><a href="#point02">관광</a></li>
+			<li class="hotel"><a href="#point03">호텔</a></li>
+			<li class="meal"><a href="#point04">식사</a></li>
+			<li class="insurance"><a href="#point05">보험</a></li>
+			<li class="bene"><a href="#point06">기타</a></li>
+		</ul>
+		<div class="panels cont_keypoints">
+			<div id="point01" class="item item01">
+				<div class="text_wrap sml"><strong class="tit">하나팩 세이브</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>가성비, 효율성, 편리함을 담은 실속형 상품입니다.<br>합리적으로 인하된 가격으로 선택관광이 진행됩니다.<br>전통적인 패키지 상품으로&nbsp; 단체 쇼핑센터를
+						방문하며,<br>가이드&amp;기사 경비가 불포함되어 추가 경비가 있습니다.</li>
+				</ul>
+				<div class="text_wrap sml"><strong class="tit"> 상품 핵심포인트</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>① 가성비 좋은 시내 4성급 호텔<br>② 바나산 테마파크▶입장권, 케이블카<br>③ 호이안▶투본강, 도자기 마을, 올드타운 관광<br>④ 다낭 시내관광▶ 마블마운틴, 손짜, 대성당<br>⑤
+						쉼표가 있는 여행 ' 자유시간'<br>⑥ 호이안 현지식 특식 등 다양한 현지식, 한식 식사<br>⑦ '미케 비치'에서 음료 한 잔의 여유<br>⑧ 베트남 특산품 '전통 모자 농' 제공<br>⑨
+						비교 필수! 거품 없고 합리적인 가격의 선택관광</li>
+				</ul>
+				<div class="text_wrap sml"><strong class="tit">하나투어와 함께, 즐거운 안심여행 "SAFETY&amp;JOY"</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>① 호텔/관광지: 국가별 안전지침 준수<br>② 차량 : 차량 소독 및 손소독제 비치<br>③ 가이드 : 백신 접종 완료, 마스크착용, 체온 측정<br>④ 코로나 지원안 : 상세안내 <a
+							target="_blank" href="https://image.hanatour.com/usr/manual/etc/support_COVID19.pdf">(바로가기)</a></li>
+				</ul>
+				<div class="text_wrap sml"><strong class="tit">해외 긴급 의료지원 서비스 “어시스트카드"</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>① 365일 24시간한국알람센터운영<br>② 여행중긴급도움필요시의료지원 / 긴급상황지원 <br>③ 서비스상세안내 <a target="_blank"
+							href="https://image.hanatour.com/usr/manual/etc/assistcard_service.pdf">(바로가기)</a></li>
+				</ul>
+			</div>
+			<div id="point02" class="item item02">
+				<div class="text_wrap sml"><strong class="tit">스페셜포함</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>호이안 투본강 투어, 바나산 테마파크</li>
+				</ul>
+				<div class="text_wrap sml"><strong class="tit"> 맛 &amp; 멋 &amp; 쉼이 있는 매력 도시 「다낭」</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>① 다낭 시내 구석구석 살펴보기<br>- 다낭의 사진 명소 '다낭 대성당'<br>- 베트남 최대 높이의 불상 '해수관음상(손짜)'<br>- 대리석으로 이루어진 다섯 개의 산
+						'마블마운틴(오행산)'<br>② 쉼표가 있는 여행 '오전 자유시간'</li>
+				</ul>
+				<div class="text_wrap sml"><strong class="tit"> 동서양의 문화가 어우러진 「호이안」</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>① 유네스코 세계 문화유산 '호이안 올드타운' 둘러보기<br>② 호이안을 가로지르는 '투본강 투어'<br>③ 아기자기한 장식품들로 가득한 '도자기 마을' 방문</li>
+				</ul>
+				<div class="text_wrap sml"><strong class="tit"> 꼭 가야 할 필수 여행지 「바나산 테마파크」</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>① 바나산 테마파크에서 '반나절 자유시간'<br>② 왕복 교통편 &amp; 바나산 케이블카 포함<br>③ 포토존 '골든 브릿지'에서 인증샷은 필수</li>
+				</ul>
+			</div>
+			<div id="point03" class="item item03">
+				<div class="text_wrap sml"><strong class="tit">🏤 다낭 시내에 위치한 4성 호텔 이용</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>예정 호텔 : 로얄로터스, 만딜라 또는 동급</li>
+				</ul>
+			</div>
+			<div id="point04" class="item item04">
+				<div class="text_wrap sml"><strong class="tit">🍴 다낭 여행할 맛나네</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li>① 야경이 아름다운 호이안 맛집에서 즐기는 '현지식 특식'<br>② 전일 호텔 조식 포함, 다양한 한식과 현지식 제공<br>※ 바나산 자유시간 시 중식 불포함 </li>
+				</ul>
+			</div>
+			<div id="point05" class="item item05">
+				<div class="text_wrap sml"><strong class="tit">1억원 여행자보험</strong></div>
+
+
+
+
+				<ul class="list_bul nostyle">
+					<li>여행자보험 보장플랜 1억원</li>
+				</ul>
+
+
+				<ul class="list_bul nostyle">
+					<li>해외치료비 [질병] 보장한도 500만원 --&gt; 3,000만원 업그레이드 (출발일 ~ 2022년 12월 31일 까지)</li>
+				</ul>
+
+
+				<ul class="list_bul nostyle">
+					<li>[휴대품 도난/파손] 전연령 50만원 보장</li>
+				</ul>
+
+
+				<ul class="list_bul nostyle">
+					<li>* 국가/연령에 따라 보장내용이 상이할 수 있습니다.<br>* 자세한 내용은 <b><a href="#" inspkgcode="PG4111220801KET">보장내역
+								자세히보기(클릭)</a></b> 확인해주시기 바랍니다.</li>
+				</ul>
+			</div>
+			<div id="point06" class="item item06">
+				<div class="text_wrap sml"><strong class="tit">출입국 정보</strong></div>
+
+				<ul class="list_bul nostyle">
+					<li> 한국 출국 전 준비사항 <br>▪ 베트남은 코로나19 검역 절차 폐지로 별도 준비서류 없습니다.<br>▪ 아동 동반 시 영문 가족관계 증명서 지참 필수 <br>- 부모 또는 부모
+						중 1명 동행 시에도 필수 <br>- 부모 미동반 시: 영문 공증된 부모 동의서 추가 필요 </li>
+				</ul>
+
+
+				<ul class="list_bul nostyle">
+					<li> 베트남 입국 후 검역 규정/절차<br>▪ 베트남은 입국 후 별도의 검역규정이 없어 입국 후 바로 자유로운 여행이 가능합니다.</li>
+				</ul>
+
+
+				<ul class="list_bul nostyle">
+					<li> 한국 귀국 준비사항/절차<br>▪ 2022년 9월 3일부터 한국 귀국을 위한 코로나 검사는 불필요합니다.<br>- 사전입력시스템(Q-code)에서 발급한 QR코드 제시<br>-
+						한국 입국 후 1일 이내 관할 보건소 방문하여 PCR 검사 필수</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
