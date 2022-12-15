@@ -17,3 +17,10 @@ http://www.trirand.com/blog/ 제이쿼리 그리드 플러그인
 		git reset --hard {commitID}
 - 3. 해당 유실된 커밋만 현재 브랜치로 가져오려면 아래처럼 체리픽을 이용한다.
 		git cherry-pick {commitID}
+
+깃 사용법 중 깃 플로우 활성화 및 사용 방법
+- 1. 소스트리 우측상단에 깃 플로우 메뉴 선택해서 시작
+
+- 2. 만약 에러시 git flow init 해서 엔터
+- 3. 위 2번방식이 안된다면 git flow init -f 해서 엔터 해서 진행
+링크 https://www.lesstif.com/gitbook/sourcetree-git-flow-git-feature-branch-89555664.html (참고내용)
