@@ -24,3 +24,12 @@ http://www.trirand.com/blog/ 제이쿼리 그리드 플러그인
 - 2. 만약 에러시 git flow init 해서 엔터
 - 3. 위 2번방식이 안된다면 git flow init -f 해서 엔터 해서 진행
 링크 https://www.lesstif.com/gitbook/sourcetree-git-flow-git-feature-branch-89555664.html (참고내용)
+
+노드 설치 및 실행법
+- 1. 노드 사이트에서 환경비트에맞게 설치
+- 2. 터미널 및 cmd에서 npm node.js -v 확인
+- 3. 설치하고싶은 경로로이동 cd 파일경로
+- 4. 리엑트 설치 : npm -g creat-react-app (리엑트 설치 명령어)
+- 5. 리엑트 설치 확인 : npm react -v
+- 6. 리엑트 배포 방법 : 설치경로 이동후 npm run start
+- 7. 리엑트 배포 끄는 방법 : Ctrl + C 후 Y 입력
