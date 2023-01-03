@@ -33,3 +33,7 @@ http://www.trirand.com/blog/ 제이쿼리 그리드 플러그인
 - 5. 리엑트 설치 확인 : npm react -v
 - 6. 리엑트 배포 방법 : 설치경로 이동후 npm run start
 - 7. 리엑트 배포 끄는 방법 : Ctrl + C 후 Y 입력
+- 8. 타 환경 및 타 컴퓨터에서 리엑트 환경 작업이 안될시 
+   - 1. node.js 환경인지 체크
+	 - 2. npm update 통해 최신버젼 업데이트 및 npm 환경 설치 요망
+	 - 3. npm install -g react-script 환경도 체크 요망
