@@ -103,6 +103,18 @@
 				clickable: true,
 				type: 'bullets',
 			},
+			slidesPerView: 'auto', // 한 슬라이드에 보여줄 갯수
+			spaceBetween: 6, // 슬라이드 사이 여백
+			loop: false, // 슬라이드 반복 여부(true시 무한 loop)
+			autoplay: { // 자동 슬라이드 설정 , 비 활성화 시 false
+				delay: 3000, // 시간 설정
+				disableOnInteraction: false, // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
+			},
+			direction: "vertical", // 스와이프 방향
+			slideToClickedSlide: true, // 해당 슬라이드 클릭시 슬라이드 위치로 이동
+			centeredSlides: true, // true시에 슬라이드가 가운데로 배치
+			allowTouchMove: true, // false시에 스와이핑이 되지 않으며 버튼으로만 슬라이드 조작이 가능
+			watchOverflow: true // 슬라이드가 1개 일 때 pager, button 숨김 여부 설정
 		});
 
 
