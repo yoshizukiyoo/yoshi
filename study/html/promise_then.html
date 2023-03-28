@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		//선언부
+		const func1 = function () {
+			return new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					console.log('a');
+					resolve();
+					//reject('func1 fail');
+				}, 300);
+			});
+		};
+
+		const func2 = function () {
+			return new Promise(function (resolve, reject) {
+				setTimeout(function () {
+					console.log('b');
+					resolve();
+					//reject('func2 fail');
+				}, 500);
+			});
+		};
+
+		const func3 = function () {
+			return new Promise(function (resolve, reject) {
+				console.log('c');
+				resolve()
+			})
+		};
+
+
+		//실행부
+		func3()
+			.then(func2)
+			.then(func1)
+// c a b 반환
+//then의 파라미터는 함수가 들어가야 하는데, func2()는 promise객체이기 때문에 .then(func2())이 작동하지 않음
+	</script>
+</body>
+
+</html>
